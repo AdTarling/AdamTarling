@@ -1,0 +1,31 @@
+﻿@using adamtarling.web.ViewModels.Components.Interfaces
+@using adamtarling.web.Constants
+
+@model IComponent
+
+@{ 
+    switch (Model.DocumentTypeAlias)
+    {
+        case DocumentTypeAliases.Banner: 
+            @Html.Partial("Components/_Banner", Model);
+            break;
+        case DocumentTypeAliases.InformationWithoutBackground:
+            @Html.Partial("Components/_InformationWithoutBackground", Model);
+            break;
+        case DocumentTypeAliases.InformationWithoutBackgroundVertical:
+            @Html.Partial("Components/_InformationWithoutBackgroundVertical", Model);
+            break;
+        case DocumentTypeAliases.InformationWithBackground:
+            @Html.Partial("Components/_InformationWithBackground", Model);
+            break;
+        case DocumentTypeAliases.ContactForm:
+            @Html.Partial("Components/_ContactForm", Model);
+            break;
+        case DocumentTypeAliases.ContactDetails:
+            @Html.Partial("Components/_ContactDetails", Model);
+            break;
+        case DocumentTypeAliases.Footer:
+            @Html.Partial("Components/_Footer", Model);
+            break;
+    }
+}

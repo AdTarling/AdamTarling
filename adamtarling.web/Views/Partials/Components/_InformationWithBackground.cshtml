@@ -1,0 +1,64 @@
+﻿@using adamtarling.web.ViewModels.Components
+@using adamtarling.web.ExtensionMethods
+@model InformationWithBackgroundViewModel
+
+<div class="work" id="@Model.AnchorTag">
+    <div class="container">
+        <div class="work-main">
+            <div class="work-top">
+                @if (!Model.Title.IsNullOrWhiteSpace())
+                {
+                    <h1>@Model.Title</h1>
+                }
+
+                @if (Model.Copy != null)
+                {
+                    @Html.Raw(Model.Copy)
+                }
+            </div>
+
+            @if (!Model.InformationTiles.IsNullOrEmpty())
+            {
+                var leftColumn = true;
+                <div class="work-bottom">
+                    @foreach (var informationTile in Model.InformationTiles)
+                    {
+                        if (leftColumn)
+                        {
+                            @Html.Raw("<div class='col-md-6 work-left'>")
+                            leftColumn = false;
+                        }
+                        else {
+                            @Html.Raw("<div class='col-md-6 work-right'>")
+                            leftColumn = true;
+                        }
+                            <div class="work-grid">
+                                @if (informationTile.Icon != null
+                                && !informationTile.Icon.Url.IsNullOrWhiteSpace())
+                                {
+                                    <div class="work-grid-left">
+                                        <img src="@informationTile.Icon.Url" alt="">
+                                    </div>
+                                }
+
+                                <div class="work-grid-right">
+                                    @if (!informationTile.Title.IsNullOrWhiteSpace())
+                                    {
+                                        <h4>@informationTile.Title</h4>
+                                    }
+
+                                    @if (!informationTile.Copy.IsNullOrWhiteSpace())
+                                    {
+                                        @Html.Raw(informationTile.Copy)
+                                    }
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        @Html.Raw("</div>")
+                    }
+                    <div class="clearfix"> </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

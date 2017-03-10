@@ -1,0 +1,49 @@
+﻿@using adamtarling.web.ViewModels.Components
+@using adamtarling.web.ExtensionMethods
+@model ContactDetailsViewModel
+
+<div class="footer agileinfo" id="@Model.AnchorTag">
+    <div class="container">
+        <div class="footre-main">
+            <div class="footer-top">
+                @if (!Model.Title.IsNullOrWhiteSpace())
+                {
+                    <h3>@Model.Title</h3>
+                }
+
+                @if (!Model.Copy.IsNullOrWhiteSpace())
+                {
+                    <p>@Model.Copy</p>
+                }
+            </div>
+
+            @if (!Model.ContactDetailBlocks.IsNullOrEmpty())
+            {
+                <div class="footer-bottom">
+                    @foreach (var contactDetailBlock in Model.ContactDetailBlocks)
+                    {
+                        <div class="col-md-4 ftr-grid">
+                            @if (contactDetailBlock.Icon != null && !contactDetailBlock.Icon.Url.IsNullOrWhiteSpace())
+                            {
+                                <span class="ftr-address-icons"><img src="@contactDetailBlock.Icon.Url" alt=""></span>
+                            }
+                            <div class="ftr-text">
+                                @if (!contactDetailBlock.Title.IsNullOrWhiteSpace())
+                                {
+                                    <h4>@contactDetailBlock.Title</h4>
+                                }
+
+                                @if (contactDetailBlock.Copy != null)
+                                {
+                                    @Html.Raw(contactDetailBlock.Copy);
+                                }
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    }                  
+                    <div class="clearfix"> </div>
+                </div>
+            }         
+        </div>
+    </div>
+</div>

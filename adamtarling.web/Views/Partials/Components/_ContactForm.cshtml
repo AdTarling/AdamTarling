@@ -1,0 +1,43 @@
+﻿@using adamtarling.web.ViewModels.Components
+@model ContactFormViewModel
+
+<div class="contact" id="@Model.AnchorTag">
+    <div class="container">
+        <div class="contact-main w3agile">
+            <div class="col-md-7 contact-left">
+                <div class="contact-top">
+                    @if (!Model.Title.IsNullOrWhiteSpace())
+                    {
+                        <h3>@Model.Title</h3>
+                    }
+
+                    @if (!Model.Copy.IsNullOrWhiteSpace())
+                    {
+                        <p>@Html.Raw(Model.Copy)</p>
+                    }
+                </div>
+                <div id="contactFormWrapper" class="contact-bottom">
+                    <form id="contactForm" action="/umbraco/surface/contactsurface/submit" method="post">
+                        <input id="name" type="text" placeholder=@Model.NameLabel name="Name" required="">
+                        <input id="email" type="text" class="no-mar" placeholder=@Model.EmailLabel name="Email" required>
+                        <input id="phone" type="text" placeholder=@Model.PhoneLabel name="Phone">
+                        <textarea id="message" placeholder=@Model.MessageLabel name="Message" required maxlength="1000"></textarea>
+                        <p class="errorMessage" style="color: red">Error</p>
+                        <p class="successMessage" style="color: green">Success</p>
+                        <input id="contactSubmit" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            @if (!Model.LocationParameterString.IsNullOrWhiteSpace())
+            {
+                <div class="col-md-5 map">
+                    <iframe src="@String.Format("{0}{1}", "https://www.google.com/maps/embed?", Model.LocationParameterString)" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            }          
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/front-end/js/contact.js"></script>

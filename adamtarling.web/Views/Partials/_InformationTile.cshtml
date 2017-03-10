@@ -1,0 +1,30 @@
+﻿@using adamtarling.web.Models
+@model InformationTile
+
+@if (Model.IsImageTile)
+{
+    if (Model.Image != null && !Model.Image.Url.IsNullOrWhiteSpace())
+    {
+        <img src="@Model.Image.Url" alt="">
+    }
+}
+else
+{
+    if (Model.Icon != null && !Model.Icon.Url.IsNullOrWhiteSpace())
+    {
+        <span class="About-icon"><img src="@Model.Icon.Url" alt=""> </span>
+    }
+
+    <div class="about-text">
+        @if (!Model.Title.IsNullOrWhiteSpace())
+        {
+            <h4>@Model.Title</h4>
+        }
+        
+        @if (!Model.Copy.IsNullOrWhiteSpace())
+        {
+            <p>@Html.Raw(Model.Copy)</p>
+        }
+    </div>
+    <div class="clearfix"> </div>
+}

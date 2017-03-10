@@ -1,0 +1,5 @@
+C:\Git\adamtarling\adamtarling.tests\bin\Debug\adamtarling.tests.dll
+C:\Git\adamtarling\adamtarling.tests\bin\Debug\adamtarling.tests.pdb
+C:\Git\adamtarling\adamtarling.tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Git\adamtarling\adamtarling.tests\obj\Debug\adamtarling.tests.dll
+C:\Git\adamtarling\adamtarling.tests\obj\Debug\adamtarling.tests.pdb

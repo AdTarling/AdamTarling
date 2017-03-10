@@ -1,0 +1,10 @@
+﻿@using adamtarling.web.ViewModels
+
+@model HomePageViewModel
+
+@{
+    foreach(var component in Model.BodyComponents)
+    {
+        @Html.Partial("_ComponentRenderingEngine", component)
+    }
+}

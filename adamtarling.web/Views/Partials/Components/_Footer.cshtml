@@ -1,0 +1,44 @@
+﻿@using adamtarling.web.ExtensionMethods
+@model adamtarling.web.ViewModels.Components.FooterViewModel
+
+<div class="copy-right">
+    <div class="container">
+        <div class="copy-rights-main">
+            <div class="copy-left">
+                <p>© @DateTime.Now.Year @Model.CopyrightCopy</p>
+            </div>
+
+            @if (!Model.IconLinks.IsNullOrEmpty())
+            {
+                <div class="copy-rit">
+                    @foreach (var iconLink in Model.IconLinks)
+                    {
+                        if (iconLink.Image != null && iconLink.Link != null)
+                        {
+                            <span><a href="@iconLink.Link.Url" target="@iconLink.Link.Target"><img src="@iconLink.Image.Url" class="iconFooter" /></a></span>
+                        }
+                    }
+                </div>
+                <div class="clearfix"> </div>
+            }
+            
+        </div>
+        <script type="text/javascript">
+										$(document).ready(function() {
+											/*
+											var defaults = {
+									  			containerID: 'toTop', // fading element id
+												containerHoverID: 'toTopHover', // fading element hover id
+												scrollSpeed: 1200,
+												easingType: 'linear'
+									 		};
+											*/
+
+											$().UItoTop({ easingType: 'easeOutQuart' });
+
+										});
+        </script>
+        <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+    </div>
+</div>

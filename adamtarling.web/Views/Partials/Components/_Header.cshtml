@@ -1,0 +1,40 @@
+﻿@using adamtarling.web.ViewModels.Components
+@using adamtarling.web.ExtensionMethods
+@model HeaderViewModel
+
+<div class="header" id="home">
+    <div class="container">
+        <div class="header-main">
+            @*<div class="logo">
+                <a href="index.html"><img src="images/logo1.png" alt=""> </a>
+            </div>*@
+
+            @if (!Model.NavigationScrollLinks.IsNullOrEmpty())
+            {
+                <div class="top-nav">
+                    <span class="menu"> <img src="/front-end/images/icon.png" alt=""></span>
+                    <nav class="cl-effect-8" id="cl-effect-8">
+                        <ul class="res">
+                            @foreach (var navigationLink in Model.NavigationScrollLinks)
+                            {
+                                <li><a href="#@navigationLink.AnchorTag" class="scroll">@navigationLink.Name</a></li>
+                            }
+                        </ul>
+                    </nav>
+                    <!-- script-for-menu -->
+                    <script>
+								   $( "span.menu" ).click(function() {
+									 $( "ul.res" ).slideToggle( 300, function() {
+									 // Animation complete.
+									  });
+									 });
+                    </script>
+                    <!-- /script-for-menu -->
+
+                </div>
+                <div class="clearfix"> </div>
+            }
+            
+        </div>
+    </div>
+</div>

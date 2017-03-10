@@ -1,0 +1,51 @@
+﻿@using adamtarling.web.ViewModels.Components
+@using adamtarling.web.ExtensionMethods
+
+@model InformationWithoutBackgroundViewModel
+
+<div class="about" id="@Model.AnchorTag">
+    <div class="container">
+        <div class="about-main">
+            <div class="about-top">
+                @if (!Model.Title.IsNullOrWhiteSpace())
+                {
+                    <h2>@Model.Title</h2>
+                }
+
+                @if (Model.Copy != null)
+                {
+                    @Html.Raw(Model.Copy)
+                }
+            </div>
+
+            @if (!Model.InformationTiles.IsNullOrEmpty())
+            {
+                var isLeftColumn = true;
+
+                <div class="about-bottom">
+                    @foreach (var informationTile in Model.InformationTiles)
+                    {
+                        <div class="about-grid">
+                            @if (isLeftColumn)
+                            {
+                                <div class="col-md-6 about-grid-left">
+                                    @Html.Partial("_InformationTile", informationTile)
+                                </div>
+                                isLeftColumn = false;
+                            }
+                            else
+                            {
+                                <div class="col-md-6 about-grid-right">
+                                    @Html.Partial("_InformationTile", informationTile)
+                                </div>
+                                <div class="clearfix"> </div>
+                                isLeftColumn = true;
+                            }
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>

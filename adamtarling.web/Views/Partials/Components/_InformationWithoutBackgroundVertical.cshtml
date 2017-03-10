@@ -1,0 +1,47 @@
+﻿@using adamtarling.web.ViewModels.Components
+@using adamtarling.web.ExtensionMethods
+@model InformationWithoutBackgroundVerticalViewModel
+
+<div class="services" id="@Model.AnchorTag">
+    <div class="container">
+        <div class="services-main  w3l">
+            <div class="services-top">
+                @if (!Model.Title.IsNullOrWhiteSpace())
+                {
+                    <h3>@Model.Title</h3>
+                }
+
+                @if (Model != null)
+                {
+                    @Html.Raw(Model.Copy)
+                }
+            </div>
+
+            @if (!Model.InformationTiles.IsNullOrEmpty())
+            {
+                <div class="services-bottom">
+                    @foreach (var informationTile in Model.InformationTiles)
+                    {                   
+                        <div class="ser-grid">
+                            @if (informationTile.Icon != null && !informationTile.Icon.Url.IsNullOrWhiteSpace())
+                            {
+                                <img src="@informationTile.Icon.Url?width=64&height=64" alt="">
+                            }
+
+                            @if (!informationTile.Title.IsNullOrWhiteSpace())
+                            {
+                                <h4>@informationTile.Title</h4>
+                            }
+
+                            @if (!informationTile.Copy.IsNullOrWhiteSpace())
+                            {
+                                @Html.Raw(informationTile.Copy)
+                            }
+                            <p>&nbsp;</p>
+                        </div>
+                    }
+                </div>
+            }          
+        </div>
+    </div>
+</div>

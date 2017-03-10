@@ -1,0 +1,68 @@
+﻿@using adamtarling.web.ViewModels.Components
+@using adamtarling.web.ExtensionMethods
+
+@model BannerViewModel
+
+<div class="banner" id="@Model.AnchorTag">
+
+    @if (Model.HeaderViewModel != null)
+    {
+        @Html.Partial("Components/_Header", Model.HeaderViewModel)
+    }
+
+    @if (!Model.BannerSlides.IsNullOrEmpty())
+    {
+        <section class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    @foreach (var bannerSlide in Model.BannerSlides)
+                    {
+                        <li>
+                            <div class="banner-main">
+                                @if (!bannerSlide.Title.IsNullOrWhiteSpace())
+                                {
+                                    <h4>@bannerSlide.Title</h4>
+                                }
+
+                                @if (!bannerSlide.Subtitle.IsNullOrWhiteSpace())
+                                {
+                                    <h3>@bannerSlide.Subtitle</h3>
+                                }
+
+                                @if (!bannerSlide.Copy.IsNullOrWhiteSpace())
+                                {
+                                    <p>@bannerSlide.Copy</p>
+                                }
+
+                                <div class="clearfix"> </div>
+                            </div>
+                        </li>
+                    }                                 
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </section>
+    }
+
+</div>
+
+<script defer src="~/front-end/js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+					$(function(){
+					});
+					$(window).load(function(){
+					  $('.flexslider').flexslider({
+						animation: "slide",
+						start: function(slider){
+						  $('body').removeClass('loading');
+						}
+					  });
+					});
+</script>
+
+@*<style>
+    .banner {
+            background: url(@Model.BackgroundImage.Url)no-repeat;
+            
+    }
+</style>*@

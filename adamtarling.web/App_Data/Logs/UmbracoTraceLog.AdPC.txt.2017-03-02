@@ -1,0 +1,32 @@
+﻿ 2017-03-02 10:22:19,040 [P13272/D12/T264] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username adamtarling@hotmail.com from IP address 127.0.0.1
+ 2017-03-02 10:22:19,040 [P13272/D12/T264] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: adamtarling@hotmail.com logged in from IP address 127.0.0.1
+ 2017-03-02 10:22:19,101 [P13272/D12/T36] INFO  Umbraco.Core.PluginManager - Starting resolution types of Umbraco.Web.Trees.TreeController
+ 2017-03-02 10:22:19,101 [P13272/D12/T36] INFO  Umbraco.Core.PluginManager - Completed resolution of types of Umbraco.Web.Trees.TreeController, found 0 (took 0ms)
+ 2017-03-02 10:22:19,254 [P13272/D12/T275] INFO  Umbraco.Core.PluginManager - Starting resolution types of umbraco.interfaces.ITree
+ 2017-03-02 10:22:19,256 [P13272/D12/T275] INFO  Umbraco.Core.PluginManager - Completed resolution of types of umbraco.interfaces.ITree, found 0 (took 2ms)
+ 2017-03-02 10:22:46,929 [P13272/D12/T287] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Expertise' with Id '1169' has been published.
+ 2017-03-02 10:22:51,032 [P13272/D12/T275] INFO  umbraco.content - Save Xml to file...
+ 2017-03-02 10:22:51,068 [P13272/D12/T275] INFO  umbraco.content - Saved Xml to file.
+ 2017-03-02 10:22:58,812 [P13272/D12/T263] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Expertise' with Id '1169' has been published.
+ 2017-03-02 10:23:02,862 [P13272/D12/T36] INFO  umbraco.content - Save Xml to file...
+ 2017-03-02 10:23:02,870 [P13272/D12/T36] INFO  umbraco.content - Saved Xml to file.
+ 2017-03-02 10:23:14,244 [P13272/D12/T151] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Expertise' with Id '1169' has been published.
+ 2017-03-02 10:23:18,285 [P13272/D12/T263] INFO  umbraco.content - Save Xml to file...
+ 2017-03-02 10:23:18,324 [P13272/D12/T263] INFO  umbraco.content - Saved Xml to file.
+ 2017-03-02 10:24:12,606 [P13272/D12/T36] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Expertise' with Id '1169' has been published.
+ 2017-03-02 10:24:16,694 [P13272/D12/T272] INFO  umbraco.content - Save Xml to file...
+ 2017-03-02 10:24:16,706 [P13272/D12/T272] INFO  umbraco.content - Saved Xml to file.
+ 2017-03-02 10:24:59,965 [P13272/D12/T264] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Expertise' with Id '1169' has been published.
+ 2017-03-02 10:25:04,060 [P13272/D12/T263] INFO  umbraco.content - Save Xml to file...
+ 2017-03-02 10:25:04,128 [P13272/D12/T263] INFO  umbraco.content - Saved Xml to file.
+ 2017-03-02 10:25:06,272 [P13272/D12/T316] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Expertise' with Id '1169' has been published.
+ 2017-03-02 10:25:10,329 [P13272/D12/T275] INFO  umbraco.content - Save Xml to file...
+ 2017-03-02 10:25:10,336 [P13272/D12/T275] INFO  umbraco.content - Saved Xml to file.
+ 2017-03-02 10:25:32,551 [P13272/D12/T265] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Expertise' with Id '1169' has been published.
+ 2017-03-02 10:25:36,811 [P13272/D12/T148] INFO  umbraco.content - Save Xml to file...
+ 2017-03-02 10:25:36,824 [P13272/D12/T148] INFO  umbraco.content - Saved Xml to file.
+ 2017-03-02 10:39:12,912 [P13272/D12/T263] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-03-01 10:39:12
+ 2017-03-02 10:45:02,386 [P13272/D12/T264] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-02 10:45:05,477 [P13272/D12/T36] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-02 10:47:55,589 [P13272/D12/T275] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-03-02 10:47:55,636 [P13272/D12/T264] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
