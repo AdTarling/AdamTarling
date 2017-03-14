@@ -528,6 +528,7 @@
     <Content Include="Config\applications.config" />
     <Content Include="Config\404handlers.config" />
     <Content Include="App_Plugins\RJP.MultiUrlPicker\package.manifest" />
+    <None Include="Properties\PublishProfiles\LocalPublish.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
